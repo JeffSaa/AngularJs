@@ -1,6 +1,11 @@
 angular.module("MyAngularApp",[])
 .controller("MyController",function($scope){
 
-	$scope.name = "";
+	$scope.newMessage = "";
+	$scope.messages = [];
+	$scope.sendMessage = function(){
+		$scope.messages.push($scope.newMessage);
+		$scope.newMessage = "";
+	}
 
 });

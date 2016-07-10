@@ -6,8 +6,15 @@
     <script src="controller.js"></script>
   </head>
   <body ng-controller="MyController">
-  	<input type="text" ng-model="name" placeholder="Your name here!">
+  	<form ng-submit="sendMessage()">
+  		<input type="text" ng-model="newMessage" placeholder="Here you message">
+  		<input type="submit" value="Send message">
+  	</form>
   	<br><br>
-  	{{"Hello "+name}}
+  	<ul>
+  		<li ng-repeat="message in messages">
+  			{{message}}
+  		</li>
+  	</ul>
   </body>
 </html>
