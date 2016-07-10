@@ -6,6 +6,8 @@
     <script src="controller.js"></script>
   </head>
   <body ng-controller="MyController">
-  	{{hello}}
+  	<input type="text" ng-model="name" placeholder="Your name here!">
+  	<br><br>
+  	{{"Hello "+name}}
   </body>
 </html>
